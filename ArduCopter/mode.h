@@ -39,6 +39,7 @@ public:
         AUTOROTATE =   26,  // Autonomous autorotation
         AUTO_RTL =     27,  // Auto RTL, this is not a true mode, AUTO will report as this mode if entered to perform a DO_LAND_START Landing sequence
         TURTLE =       28,  // Flip over after crash
+        HEADING_LOCK = 29,  // Keeps at current heading, takes pitch and roll
 
         // Mode number 127 reserved for the "drone show mode" in the Skybrush
         // fork at https://github.com/skybrush-io/ardupilot
@@ -1167,6 +1168,7 @@ private:
 #endif
 
 };
+
 
 
 class ModePosHold : public Mode {
