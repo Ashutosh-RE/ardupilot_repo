@@ -68,6 +68,10 @@ const AP_Scheduler::Task Plane::scheduler_tasks[] = {
     SCHED_TASK(calc_airspeed_errors,   10,    100,  42),
     SCHED_TASK(update_alt,             10,    200,  45),
     SCHED_TASK(adjust_altitude_target, 10,    200,  48),
+
+    //AOA Sensor Schedule
+    SCHED_TASK_CLASS(AP_AS5600, &plane.AOA, AP_AS5600::update , 10, 100, 70),
+
 #if ADVANCED_FAILSAFE == ENABLED
     SCHED_TASK(afs_fs_check,           10,    100,  51),
 #endif

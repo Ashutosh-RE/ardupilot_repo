@@ -29,6 +29,9 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+//AOA sensor
+#include <AP_AS5600/AP_AS5600.h>
+
 #include <AP_HAL/AP_HAL.h>
 #include <AP_Common/AP_Common.h>
 #include <AP_Airspeed/AP_Airspeed.h>

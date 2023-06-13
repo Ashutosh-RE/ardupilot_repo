@@ -57,6 +57,9 @@
 #include <AC_Fence/AC_Fence.h>
 #include <AP_CheckFirmware/AP_CheckFirmware.h>
 
+#include <AP_AS5600/AP_AS5600.h>
+
+
 class AP_Vehicle : public AP_HAL::HAL::Callbacks {
 
 public:
@@ -320,7 +323,8 @@ protected:
     // Integration time; time last loop took to run
     float G_Dt;
 
-    // sensor drivers
+    AP_AS5600 AOA;
+
     AP_GPS gps;
     AP_Baro barometer;
     Compass compass;
